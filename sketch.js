@@ -39,32 +39,24 @@ function draw() {
   {
   fill(255);
   textSize(16);
-  text("Press Space to start the game",130,80);
-  text("Press up arrow to make the player jump",90,100);
-  text("Press right and left arrow to move right and left ",60,120);
-  if(keyDown("space"))
-  {
-    player.velocityY=-16;
-    gameState = PLAY;
-  }
-  }
-
-  if(gameState == PLAY){
+  text("Press Space to make jack jump",130,100);
+  text("Press right and left arrow to make jack go right and left",50,80);
   if(keyDown("up"))
   {
-    player.velocityY=-16;
+    player.velocityY=-10;
+    gameState =PLAY;
+  }
   }
   
+
   if(keyDown("left"))
   {
     player.x = player.x - 7;
-    
   }
 
   if(keyDown("right"))
   {
     player.x = player.x + 7;
-   
   }
 
   player.velocityY = player.velocityY +0.8;
@@ -76,7 +68,7 @@ function draw() {
   
   
   spawnPlatform();
-  }
+
   drawSprites();
   
   
